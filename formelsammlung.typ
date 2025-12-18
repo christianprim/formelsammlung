@@ -5,7 +5,7 @@
 #import "@preview/zap:0.5.0"
 
 // Version
-#let version = "4.0.1"
+#let version = "4.0.2"
 
 // Einrichtung
 #set page(paper: "a5")
@@ -533,7 +533,7 @@ smallcaps[Pythagoras], [$#text(fill: blue)[$a$]^2+#text(fill: green)[$b$]^2=#tex
   )
   circle((0, 0), radius: 1pt, fill: red, stroke: red)
 
-  content("F_1.50%",text(fill: red)[$arrow(F)_1$], anchor: "south", padding: 2pt)
+  content("F_1.50%",text(fill: red)[$arrow(F)$], anchor: "south", padding: 3pt)
 
   // Wirkungslinie
   line(
@@ -3430,7 +3430,7 @@ $h=qty("6.62607015e-34", "J s")$#v(1em)],
 [], text(fill: aqua)[$W_A$], [Elektronenaustrittsarbeit], [$[W_A]=qty("1", "J")$],
 [$$#v(1em)], text(fill: blue)[$E_"kin"$], [Bewegungsenergie der $e^-$], [$[E_"kin"]=qty("1", "J")$],
 
-grid.cell(rowspan: 2)[#smallcaps[Heisenberg]'sche Unschärferelation], grid.cell(colspan: 3)[$#text(fill: green)[$Delta x$] #text(fill: blue)[$Delta p_x$] >= h$; $#text(fill: aqua)[$Delta E$] Delta t >= h$], 
+grid.cell(rowspan: 2)[#smallcaps[Heisenberg]sche Unschärferelation], grid.cell(colspan: 3)[$#text(fill: green)[$Delta x$] #text(fill: blue)[$Delta p_x$] >= h$; $#text(fill: aqua)[$Delta E$] Delta t >= h$], 
 text(fill: green)[$Delta x$], [Ortsunschärfe bei gleichzeitiger Messung von $x$ und $p_x$], [$[Delta x]=qty("1", "m")$],
 [], text(fill: blue)[$Delta p_x$], [Impulsunschärfe bei gleich-zeitiger Messung von $x$ und $p_x$], [$[Delta p]=qty("1", "N s")$],
 [], text(fill: aqua)[$Delta E$], [Energieunschärfe bei gleich-zeitiger Messung von $E$ und $t$], [$[Delta E]=qty("1", "J")$],
