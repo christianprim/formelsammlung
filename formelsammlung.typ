@@ -16,7 +16,7 @@
 )
 
 // Format für die Standardseite
-#let std = (
+#let standard = (
   columns: (1.55fr,0.25fr,2fr,1.1fr), 
   inset: (x:0pt, y:5pt)
 )
@@ -444,7 +444,7 @@ smallcaps[Pythagoras], [$#text(fill: blue)[$a$]^2+#text(fill: green)[$b$]^2=#tex
 = Mechanik
 == Statik
 
-#grid(..std,
+#grid(..standard,
 
 [Kräftegleichgewicht], grid.cell(colspan: 3)[Ein Körper ist im Kräftegleichgewicht, wenn die resultierende Kraft $#text(fill: red)[$arrow(F)_"res"$]$ Null ist.],
 [], grid.cell(colspan: 3)[
@@ -621,7 +621,7 @@ grid.cell(rowspan: 3)[
 // Spezielle Kräfte
 == Spezielle Kräfte
 
-#grid(..std,
+#grid(..standard,
 
 [Gewichtskraft], grid.cell(colspan: 2)[$#text(fill: red)[$F_G$]=m #text(fill: red)[$g$]$], [$[F_G]=qty("1", "N")$],
 [], [$m$], [Masse des Körpers], [$[m]=qty("1", "kg")$],
@@ -659,7 +659,7 @@ grid.cell(rowspan: 3)[
 // Flüssigkeiten
 == Flüssigkeiten
 
-#grid(..std, 
+#grid(..standard, 
 
 [Dichte], grid.cell(colspan: 2)[$rho=m/V$], [$[rho]=qty("1", "kg/m^3")$],
 [_$->$ @rho _], [$m$], [Masse], [$[m]=qty("1", "kg")$],
@@ -772,7 +772,7 @@ $]
 
 === Geradlinige Bewegung <Diagramme>
 
-#grid(..std,
+#grid(..standard,
 [Gleichförmig], grid.cell(colspan: 3)[ #grid(columns: (1fr, 1fr),
   // x-t-Diagramm
   [#cetz.canvas({
@@ -875,7 +875,7 @@ $]
   })])
 ],
 )
-#grid(..std, 
+#grid(..standard, 
 [], grid.cell(colspan: 2)[$#text(fill: green)[$x$]=#text(fill: green)[$x_0$]+#text(fill: green)[$Delta x_1$]+#text(fill: green)[$Delta x_2$]=#text(fill: green)[$x_0$]+#text(fill: blue)[$v_0$]t+1/2#text(fill: red)[$a$]t^2$], [$[x]=qty("1", "m")$],
 [], grid.cell(colspan: 2)[$#text(fill: blue)[$v$]=#text(fill: blue)[$v_0$]+#text(fill: blue)[$Delta v$]=#text(fill: blue)[$v_0$]+#text(fill: red)[$a$]t$], [$[v]=qty("1", "m/s")$],
 [], grid.cell(colspan: 2)[$#text(fill: blue)[$dash(v)$]=(#text(fill: green)[$Delta x$])/(Delta t)$], [$[dash(v)]=qty("1", "m/s")$],
@@ -895,7 +895,7 @@ grid.cell(colspan: 2)[$#text(fill: green)[$y$]=#text(fill: green)[$h$]-1/2#text(
 
 === Gleichförmige Kreisbewegung
 
-#grid(..std, 
+#grid(..standard, 
 grid.cell(rowspan: 3)[Winkelkoordinate \ 
 #align(center)[
   #cetz.canvas({
@@ -938,7 +938,7 @@ text(fill: green)[$r$], [Kreisradius#v(1em)], [$[r]=qty("1", "m")$],
 
 === Gleichmässig beschleunigte Kreisbewegung, Rotation
 
-#grid(..std, 
+#grid(..standard, 
 [Winkelbeschleunigung#v(1em)], grid.cell(colspan: 2)[$#text(fill: red)[$alpha$]=(#text(fill: purple)[$Delta omega$])/(Delta t)$], [$[alpha]=qty("1", "1/s^2")$],
 
 [Bahnbeschleunigung#v(1em)], grid.cell(colspan: 2)[$#text(fill: red)[$a$]=#text(fill: red)[$alpha$]#text(fill: green)[$r$]$], [$[a]=qty("1", "m/s^2")$],
@@ -987,7 +987,7 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
 == Dynamik
 === #smallcaps[Newtonsche] Axiome
 
-#grid(..std,
+#grid(..standard,
 [Trägheitsprinzip], grid.cell(colspan: 3)[Ein Körper, auf den keine Kraft wirkt, führt eine geradlinige, gleichförmige Bewegung aus oder verharrt in Ruhe.#v(1em)],
 
 [Aktionsprinzip], grid.cell(colspan: 2)[$#text(fill: red)[$arrow(F)_"res"$]=m#text(fill: red)[$arrow(a)$]$], [$[F_"res"]=qty("1", "N")$],
@@ -1017,7 +1017,7 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
     content("a.60%", text(fill: red)[$arrow(F_z)$], anchor: "south-east", padding: 1pt)
   })
 ]
-#grid(..std, 
+#grid(..standard, 
 [Zentripetalkraft], grid.cell(colspan: 2)[$#text(fill: red)[$F_z$]=m#text(fill: purple)[$omega$]^2#text(fill: green)[$r$]=m (#text(fill:blue)[$v$]^2)/#text(fill: green)[$r$]$], [$[F_z]=qty("1", "N")$],
 [], text(fill: green)[$r$], [Bahnradius], [$[r]=qty("1", "m")$],
 [], text(fill: purple)[$omega$], [Winkelgeschwindigkeit], [$[omega]=qty("1", "1/s")$],
@@ -1027,7 +1027,7 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
 
 === Gleichmässig beschleunigte Kreisbewegung, Rotation
 
-#grid(..std,
+#grid(..standard,
 [Grundgleichung], grid.cell(colspan: 2)[$#text(fill: red)[$M_"res"$]=J#text(fill: red)[$alpha$]$], [$[M_"res"]=qty("1", "N m")$],
 [], text(fill: red)[$M_"res"$], [resultierendes Drehmoment], [],
 [], [$J$], [Trägheitsmoment], [$[J]=qty("1", "kg m^2")$],
@@ -1045,7 +1045,7 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
 
 == Gravitation <F_G>
 
-#grid(..std,
+#grid(..standard,
 [Gravitationskraft], grid.cell(colspan: 2)[$#text(fill: red)[$F_G$]=G (m_1 m_2)/#text(fill: green)[$r$]^2$], [$[F_G]=qty("1","N")$],
 [], [$m_i$], [Massen der beiden Körper], [$[m_i]=qty("1","kg")$],
 [], text(fill: green)[$r$], [Schwerpunktsabstand], [$[r]=qty("1","m")$],
@@ -1081,7 +1081,7 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
 
 == #smallcaps[Keplersche] Gesetze
 
-#grid(..std, 
+#grid(..standard, 
 [1. #smallcaps[Keplersches] Gesetz], grid.cell(colspan: 3)[Planeten bewegen sich auf Ellipsen. Die Sonne befindet sich in einem Brennpunkt der Ellipse#v(1em)],
 
 [2. #smallcaps[Keplersches] Gesetz], grid.cell(colspan: 3)[Die Verbindungslinie zwischen Sonne und Planet überstreicht in gleichen Zeitspannen $Delta t$ gleiche Flächeninhalte #text(fill: red)[$Delta A$].],
@@ -1141,7 +1141,7 @@ grid.cell(colspan: 4)[
 
 === Arbeit
 
-#grid(..std,
+#grid(..standard,
 [Definition], grid.cell(colspan: 2)[$#text(fill: aqua)[$W$]=#text(fill: red)[$F_s$]#text(fill:green)[$s$]$], [$[W]=qty("1", "J")$],
 grid.cell(rowspan: 2)[
   #cetz.canvas({
@@ -1165,7 +1165,7 @@ text(fill: green)[$s$], [Wegstrecke], [$[s]=qty("1", "m")$]
 
 === Energie
 
-#grid(..std,
+#grid(..standard,
 [Definition], grid.cell(colspan: 2)[$#text(fill: aqua)[$Delta E$]=#text(fill: aqua)[$W$]$], [$[Delta E]=qty("1", "J")$],
 [$$#v(1em)], text(fill: aqua)[$W$], [Arbeit], [$[W]=qty("1", "J")$],
 
@@ -1298,7 +1298,7 @@ grid.cell(rowspan: 2)[
 
 === Leistung
 
-#grid(..std,
+#grid(..standard,
 [Mittlere Leistung], grid.cell(colspan: 2)[$P=(#text(fill: aqua)[$Delta E$])/(Delta t)=#text(fill: red)[$F$]#text(fill: blue)[$v$]$], [$[P]=qty("1", "W")$],
 grid.cell(rowspan: 3)[
   #cetz.canvas({
@@ -1329,7 +1329,7 @@ text(fill: blue)[$v$#v(1em)], [Geschwindigkeit des Körpers], [$[v]=qty("1", "m/
 
 === Impuls
 
-#grid(..std, 
+#grid(..standard, 
 [Definition], grid.cell(colspan: 2)[$#text(fill: blue)[$arrow(p)$]=m#text(fill: blue)[$arrow(v)$]$], [$[p]=qty("1", "N s")$],
 [], [$m$], [Masse des Körpers], [$[m]=qty("1", "kg")$],
 [$$#v(1em)], text(fill: blue)[$arrow(v)$], [Geschwindigkeit des Körpers], [$[v]=qty("1", "m/s")$],
@@ -1443,7 +1443,7 @@ text(fill: blue)[$v$#v(1em)], [Geschwindigkeit des Körpers], [$[v]=qty("1", "m/
 // Zentrale Stösse
 === Zentrale Stösse
 
-#grid(..std, 
+#grid(..standard, 
 [Unelastischer Stoss], grid.cell(colspan: 3)[
   #align(center)[
     #cetz.canvas({
@@ -1514,7 +1514,7 @@ text(fill: blue)[$v$#v(1em)], [Geschwindigkeit des Körpers], [$[v]=qty("1", "m/
 
 === Drehimpuls
 
-#grid(..std, 
+#grid(..standard, 
 [Definition], grid.cell(colspan: 2)[$#text(fill: blue)[$arrow(L)$]=J #text(fill: purple)[$arrow(omega)$]$], [$[L]=qty("1", "kg m^2/s")$],
 grid.cell(rowspan: 2)[#align(center)[
   #cetz.canvas({
@@ -1597,7 +1597,7 @@ text(fill: red)[$arrow(M)$], [mittleres Drehmoment], [$[M]=qty("1", "N m")$],
 
 == Temperatur
 
-#grid(..std,
+#grid(..standard,
 [#smallcaps[Celsius]-Temperatur], grid.cell(colspan: 2)[$theta.alt=T-T_n$], [$[theta.alt]=qty("1", "Celsius")$],
 [$$#v(0.5em)], [$T_n$], grid.cell(colspan: 2)[Normtemperatur $qty("273.15", "Kelvin")$],
 
@@ -1622,7 +1622,7 @@ text(fill: red)[$arrow(M)$], [mittleres Drehmoment], [$[M]=qty("1", "N m")$],
 
 == Ideales Gas
 
-#grid(..std,
+#grid(..standard,
 [Vergleich], grid.cell(colspan: 3)[$(#text(fill: blue)[$p_1$] V_1)/T_1=(#text(fill: blue)[$p_2$] V_2)/T_2$],
 [], text(fill:blue)[$p_i$], [absoluter Druck], [$[p_i]=qty("1", "Pa")$],
 [], [$V_i$], [Gasvolumen], [$[V_i]=qty("1", "m^3")$],
@@ -1638,7 +1638,7 @@ text(fill: red)[$arrow(M)$], [mittleres Drehmoment], [$[M]=qty("1", "N m")$],
 
 == Stoffmenge
 
-#grid(..std,
+#grid(..standard,
 [Definition], grid.cell(colspan: 2)[$n=N/N_A=m/M$], [$[n]=qty("1", "mol")$],
 [], [$N_A$], grid.cell(colspan: 2)[#smallcaps[Avogadro]-Konstante \ $qty("6.02214076e23", "1/mol")$],
 [], [$M$], [Molare Masse], [$[M]=qty("1", "g/mol")$]
@@ -1646,7 +1646,7 @@ text(fill: red)[$arrow(M)$], [mittleres Drehmoment], [$[M]=qty("1", "N m")$],
 
 == Wärmemenge
 
-#grid(..std,
+#grid(..standard,
 [Temperaturänderung], grid.cell(colspan: 2)[$#text(fill: aqua)[$Q$]=#text(fill: maroon)[$c$]m Delta theta.alt$], [$[Q]=qty("1", "J")$],
 [_$->$ @thermo _], text(fill: maroon)[$c$], [spezifische Wärmekapazität], [$[c]=qty("1", "J/kg/K")$],
 [$$#v(1em)], [$m$], [Masse des Mediums], [$[m]=qty("1", "kg")$],
@@ -1660,7 +1660,7 @@ text(fill: fuchsia)[$L_v$], [spezifische Verdampfungswärme], [$[L_v]=qty("1", "
 
 == Wärmetransport
 
-#grid(..std,
+#grid(..standard,
 [Wärmeleitung], grid.cell(colspan: 2)[$#text(fill: aqua)[$Delta Q$]/(Delta t)=-lambda (Delta T)/(#text(fill: green)[$Delta x$])#text(fill: red)[$A$]$], [$[(Delta Q)/(Delta T)]=qty("1", "J/s")$],
 [_$->$ @thermo _], [$lambda$], [Wärmeleitfähigkeit], text(size: 9.36pt)[$[lambda]=qty("1", "W/m /K")$],
 grid.cell(rowspan: 3)[#cetz.canvas({
@@ -1697,7 +1697,7 @@ text(fill: red)[$A$], [Querschnittsfläche], [$[A]=qty("1", "m^2")$],
 [Wärmestrahlung], grid.cell(colspan: 2)[$I=sigma T^4=#text(fill: aqua)[$Delta E$]/(#text(fill: red)[$A$] Delta t)$], [$[I]=qty("1", "W/m^2")$],
 grid.cell(rowspan: 2)[
     #cetz.canvas({
-      import cetz.draw: ortho, set-style,on-yz, rect, content, circle
+      import cetz.draw: *
 
       let licht = gradient.radial(
       yellow, 
@@ -1708,7 +1708,7 @@ grid.cell(rowspan: 2)[
       ortho(name: "skizze",{
         on-yz({
           rect((), (rel: (1, 1)), name: "A", fill: red.transparentize(80%), stroke: red)
-          content((0.8, 0.2), [#rotate(-10deg)[#skew(ay:-20deg)[#text(fill: red)[$A$]]]])
+          content((0.8, 0.2), [#std.rotate(-10deg)[#skew(ay:-20deg)[#text(fill: red)[$A$]]]])
         })
       })
       circle((-1.5, 0.2), radius: 0.4, stroke: none, fill: licht)
@@ -1723,7 +1723,7 @@ grid.cell(rowspan: 2)[
 
 == Hauptsätze der Wärmelehre
 
-#grid(..std,
+#grid(..standard,
 [1. Hauptsatz], grid.cell(colspan: 3)[In einem abgeschlossenen System bleibt die Gesamtenergie konstant: \ $#text(fill: aqua)[$Delta U$]=#text(fill: aqua)[$Q$]+#text(fill: aqua)[$W$]$],
 [], text(fill: aqua)[$Delta U$], [innere Energie], [$[Delta U]=qty("1", "J")$],
 [], text(fill: aqua)[$Q$], [Wärme], [$[Q]=qty("1", "J")$],
@@ -1742,7 +1742,7 @@ grid.cell(rowspan: 2)[
 
 == Thermodynamischer Wirkungsgrad
 
-#grid(..std, 
+#grid(..standard, 
 [Ideale Maschine], grid.cell(colspan: 2)[$eta_#smallcaps[Carnot]=(#text(fill: red)[$T_W$]-#text(fill: blue)[$T_K$])/#text(fill: red)[$T_W$]$], [$[eta_"Carnot"]=1$],
 [], text(fill: red)[$T_W$], [Temperatur der Antriebswärme], [$[T_W]=qty("1", "K")$],
 [$$#v(0.5em)], text(fill: blue)[$T_K$], [Temperatur der Abwärme], [$[T_K]=qty("1", "K")$]
@@ -1750,7 +1750,7 @@ grid.cell(rowspan: 2)[
 
 == Teilchenmodell
 
-#grid(..std,
+#grid(..standard,
 [Druck des idealen Gases], grid.cell(colspan: 2)[$#text(fill: blue)[$p$]=1/3 rho #text(fill: blue)[$dash(v)$]^2$], [$[p]=qty("1", "Pa")$],
 [], [$rho$], [Dichte des Gases], [$[rho]=qty("1", "kg/m^3")$],
 [], [#text(fill: blue)[$dash(v)$]], [mittlere Geschwindigkeit der Teilchen#v(1em)], [$[v]=qty("1", "m/s")$],
@@ -1765,7 +1765,7 @@ grid.cell(rowspan: 2)[Mittlere Energie eines Teilchens], grid.cell(colspan: 2)[$
 
 == Elektrostatik
 
-#grid(..std,
+#grid(..standard,
 [Kräfte zwischen Ladungen], grid.cell(colspan: 3)[gleichnamige Ladungen stossen sich ab, ungleichnamige ziehen sich an.],
 [], grid.cell(colspan: 3)[
   #align(center)[
@@ -1868,7 +1868,7 @@ grid.cell(rowspan: 2)[
 
 === Plattenkondensator
 
-#grid(..std,
+#grid(..standard,
 [Spannung], grid.cell(colspan: 2)[$#text(fill: blue)[$U$]=#text(fill: purple)[$E$]#text(fill: green)[$d$]$], [$[U]=qty("1", "V")$],
 [], text(fill: purple)[$E$], [Elektrische Feldstärke], [$[E]=qty("1", "N/C")$],
 [$$#v(1em)], text(fill: green)[$d$], [Plattenabstand], [$[d]=qty("1", "m")$],
@@ -1881,7 +1881,7 @@ grid.cell(rowspan: 2)[
 
 == Elektrodynamik
 
-#grid(..std,
+#grid(..standard,
 [Stromstärke], grid.cell(colspan: 2)[$#text(fill: red)[$I$]=(Delta Q)/(Delta t)$], [$[I]=qty("1", "A")$],
 [], [$Delta Q$], [Ladung, die in der Zeitspanne $Delta t$ durch den Leiter fliesst#v(1em)], [],
 
@@ -1983,7 +1983,7 @@ text(fill: red)[$hat(I)$], [Scheitelwert der Stromstärke], [$[hat(I)]=qty("1", 
 
 == Elektromagnetismus
 
-#grid(..std,
+#grid(..standard,
 [#smallcaps[Lorentz]-Kraft <F_L>], grid.cell(colspan: 2)[$#text(fill: red)[$F_L$]=q#text(fill: blue)[$v$]#text(fill: aqua)[$B$]$], [$[F_L]=qty("1", "N")$],
 grid.cell(rowspan: 3)[
   #cetz.canvas({
@@ -2126,7 +2126,7 @@ text(fill: green)[$l$], [Länge der Spule], [$[l]=qty("1", "m")$],
 grid.cell(rowspan: 3)[Magnetischer Fluss \
 #align(center)[
   #cetz.canvas({
-      import cetz.draw: ortho, set-style, on-yz, on-xz, rect, content, circle, line, on-layer, scope
+      import cetz.draw: *
   
       set-style(stroke: (thickness: 0.5pt, cap: "round"))
       ortho(name: "skizze", 
@@ -2135,7 +2135,7 @@ grid.cell(rowspan: 3)[Magnetischer Fluss \
         z: 10deg,
         {
         on-yz({
-          cetz.draw.rotate(x: -40deg)
+          rotate(x: -40deg)
           rect((0, 0.6), (rel: (0.6, 0.4)), stroke: red, fill: red.transparentize(50%))
           on-layer(1,line((0.6, 0.6), (rel: (0, 0.4)), (rel: (-0.6, 0)), stroke: red))
         })
@@ -2151,10 +2151,10 @@ grid.cell(rowspan: 3)[Magnetischer Fluss \
         
       })
       
-      content((0.4, 0.4), [#rotate(27deg)[#skew(ay:-50deg)[#text(fill: red, size: 6pt)[$A$]]]]) 
-      // content((0.6, 0), [#rotate(-12deg)[#skew(ax:20deg)[#text(fill: aqua)[$arrow(B)$]]]]) // otho-B
+      content((0.4, 0.4), [#std.rotate(27deg)[#skew(ay:-50deg)[#text(fill: red, size: 6pt)[$A$]]]]) 
+      // content((0.6, 0), [#std.rotate(-12deg)[#skew(ax:20deg)[#text(fill: aqua)[$arrow(B)$]]]]) // otho-B
       content((0.6, 0), text(fill: aqua)[$arrow(B)$])
-      content((1, -0.45), [#rotate(-17deg)[#skew(ax:40deg)[#text(size: 5pt)[Spule]]]])
+      content((1, -0.45), [#std.rotate(-17deg)[#skew(ax:40deg)[#text(size: 5pt)[Spule]]]])
     })
   ]
 ], grid.cell(colspan: 2)[$italic(Phi)=#text(fill: red)[$A$]#text(fill: aqua)[$B$]$], [$[italic(Phi)]=qty("1", "Wb")$],
@@ -2235,7 +2235,7 @@ grid.cell(rowspan: 4)[Induktionsgesetz \
     content("at.phi_0", text(fill: winkel)[$phi_0$], anchor: "north")  
   })])
 #v(-.5em)
-#grid(..std,
+#grid(..standard,
 [Frequenz], grid.cell(colspan: 2)[$f=1/T$], [$[f]=qty("1", "Hz")$],
 [$$#v(1em)], [$T$], [Periode/Schwingungsdauer], [$[T]=qty("1", "s")$],
 
@@ -2269,7 +2269,7 @@ grid.cell(rowspan: 4)[Induktionsgesetz \
 
 == Harmonische Welle
 
-#grid(..std,
+#grid(..standard,
 [Wellenlänge], grid.cell(colspan: 2)[$lambda=c/f$], [$[lambda]=qty("1", "m")$],
 [], [$c$], [Ausbreitungsgeschwindigkeit \ Licht: $c=qty("299792458", "m/s")$ \ Schall: $c=qty("340", "m/s")$ bei $qty("20", "Celsius")$#v(1em)], [$[c]=qty("1", "m/s")$],
 
@@ -2327,7 +2327,7 @@ grid.cell(rowspan: 4)[Induktionsgesetz \
 
 == Interferenz
 
-#grid(..std, 
+#grid(..standard, 
 [konstruktive Interferenz], grid.cell(colspan: 3)[$#text(fill: green)[$Delta s$]=n lambda$],
 [destruktive Interferenz], grid.cell(colspan: 3)[$#text(fill: green)[$Delta s$]=(2 n+1)/2 lambda$],
 grid.cell(rowspan: 3)[
@@ -2424,7 +2424,7 @@ text(fill: red)[$s$#v(1em)], [Abstand zwischen 2 Maxima], [$[s]=qty("1", "m")$]
 
 === Saiteninstrument
 
-#grid(..std, 
+#grid(..standard, 
 [Grundfrequenz], grid.cell(colspan: 2)[$#text(fill: red)[$f_0$]=c/(2 #text(fill: green)[$l$])$], [$[f_0]=qty("1", "Hz")$],
 grid.cell(rowspan: 2)[
 #align(left)[
@@ -2463,7 +2463,7 @@ text(fill: red)[$F$], [Spannkraft], [$[F]=qty("1", "N")$],
 
 === Offene Pfeife
 
-#grid(..std, 
+#grid(..standard, 
 [Grundfrequenz], grid.cell(colspan: 2)[$#text(fill: red)[$f_0$]=c/(2 #text(fill: green)[$l$])$], [$[f_0]=qty("1", "Hz")$],
 grid.cell(rowspan: 2)[
 #align(left)[
@@ -2497,7 +2497,7 @@ text(fill: green)[$l$#v(1em)], [Länge der Luftsäule], [$[l]=qty("1", "m")$],
 
 === Gedackte Pfeife
 
-#grid(..std, 
+#grid(..standard, 
 [Grundfrequenz], grid.cell(colspan: 2)[$#text(fill: red)[$f_0$]=c/(4 #text(fill: green)[$l$])$], [$[f_0]=qty("1", "Hz")$],
 grid.cell(rowspan: 2)[
 #align(left)[
@@ -2530,7 +2530,7 @@ text(fill: green)[$l$#v(1em)], [Länge der Luftsäule], [$[l]=qty("1", "m")$],
 
 === Tonsystem
 
-#grid(..std, 
+#grid(..standard, 
 [Tonintervall], grid.cell(colspan: 3)[$f_2/f_1$], 
 [_$->$ @intervall _], [$f_1$], [Frequenz des Grundtons], [$[f_1]=qty("1", "Hz")$],
 [$$#v(1em)], [$f_2$], [Frequenz des höheren Tons], [$[f_2]=qty("1", "Hz")$],
@@ -2587,7 +2587,7 @@ text(fill: green)[$l$#v(1em)], [Länge der Luftsäule], [$[l]=qty("1", "m")$],
     content("oberfläche.90%", text(fill: gray)[Medium 2], anchor: "north", padding: 2pt)
   })
 ]
-#grid(..std,
+#grid(..standard,
 [Reflexionsgesetz], grid.cell(colspan: 3)[$#text(fill: orange)[$alpha_r$]=#text(fill: red)[$alpha_1$]$],
 [], text(fill: red)[$alpha_1$], grid.cell(colspan: 2)[Einfallswinkel],
 [$$#v(1em)], text(fill: orange)[$alpha_r$], grid.cell(colspan: 2)[Reflexionswinkel],
@@ -2602,7 +2602,7 @@ text(fill: green)[$l$#v(1em)], [Länge der Luftsäule], [$[l]=qty("1", "m")$],
 
 === Gekrümmter Spiegel
 
-#grid(..std,
+#grid(..standard,
 [Brennweite], grid.cell(colspan: 2)[$f approx R/2$], [$[f]=qty("1", "m")$],
 [$$], [$R$], [Krümmungsradius \ $R>0$: Hohlspiegel \ $R<0$: Wölbspiegel], [$[R]=qty("1", "m")$]
 )
@@ -2723,7 +2723,7 @@ text(fill: green)[$l$#v(1em)], [Länge der Luftsäule], [$[l]=qty("1", "m")$],
 
 == Linsen
 
-#grid(..std,
+#grid(..standard,
 [Brechkraft], grid.cell(colspan: 2)[$D=1/f$], [$[D]=qty("1", "dpt")$],
 [$$#v(1em)], [$f$], [Brennweite], [$[f]=qty("1", "m")$],
 
@@ -2871,7 +2871,7 @@ grid.cell(rowspan: 2)[
 
 == Abbildungsgleichungen
 
-#grid(..std,
+#grid(..standard,
 [Linsen- & Spiegelformel], grid.cell(colspan: 3)[$1/#text(fill: green)[$f$]=1/#text(fill: red)[$g$]+1/#text(fill: blue)[$b$]$],
 grid.cell(rowspan: 3)[
   #cetz.canvas({
@@ -2929,7 +2929,7 @@ text(fill: blue)[$b$], [Bildweite \ $b>0$: reelles Bild \ $b<0$: virtuelles Bild
 
 == Vergrösserung
 
-#grid(..std, 
+#grid(..standard, 
 [Definition], grid.cell(colspan: 2)[$V=(tan #text(fill: red)[$alpha'$])/(tan alpha)$], [$[V]=1$],
 [], text(fill: red)[$alpha'$], grid.cell(colspan: 2)[Sehwinkel mit optischem Gerät], 
 [#v(1em)], [$alpha$], grid.cell(colspan: 2)[Sehwinkel ohne optischem Gerät],
@@ -3160,7 +3160,7 @@ text(fill: fuchsia)[$f_"Ok"$#v(1em)], [Brennweite des Okulars], [$[f_"Ok"]=qty("
 
 == Kernphysik
 
-#grid(..std, 
+#grid(..standard, 
 [Zerfallsgesetz], grid.cell(colspan: 2)[$#text(fill: blue)[$N$]=#text(fill: blue)[$N_0$] e^(-lambda t)$], [$[N]=1$],
 grid.cell(rowspan: 3)[
   #cetz.canvas({
@@ -3234,7 +3234,7 @@ text(fill: red)[$I_0$], [Strahlungsintensität vorher], [$[I_0]=qty("1", "W/m^2"
 
 == Spezielle Relativitätstheorie
 
-#grid(..std,
+#grid(..standard,
 [Relativitätsfaktor], grid.cell(colspan: 2)[$gamma=1/(sqrt(1-(#text(fill: blue)[$v$]/c)^2))$], [$[gamma]=1$],
 [], text(fill: blue)[$v$], [Geschwindigkeit des Körpers], [$[v]=qty("1", "m/s")$],
 // [$$#v(1em)], [$c$], [Lichtgeschwindigkeit im Vakuum], [$[c]=qty("1", "m/s")$],
@@ -3328,7 +3328,7 @@ text(fill: blue)[$v$], [Geschwindigkeit von #text(fill: red)[$I'$] bzgl. $I$ in 
 
 #pagebreak()
 
-#grid(..std,
+#grid(..standard,
 [Impuls], grid.cell(colspan: 2)[$#text(fill: blue)[$arrow(p)$]=gamma m_0 #text(fill: blue)[$arrow(v)$]$], [$[p]=qty("1", "N s")$],
 [], [$m_0$], [Ruhemasse des Teilchens], [$[m_0]=qty("1", "kg")$],
 [], text(fill: blue)[$arrow(v)$], [Geschwindigkeit des Teilchens], [$[v]=qty("1", "m/s")$],
@@ -3352,7 +3352,7 @@ text(fill: blue)[$v$], [Geschwindigkeit von #text(fill: red)[$I'$] bzgl. $I$ in 
 
 === #smallcaps[Minkowski]-Diagramm
 
-#grid(..std,
+#grid(..standard,
 [Winkel zw. den Achsen], grid.cell(colspan: 3)[$tan alpha=#text(fill: blue)[$v$]/c$#v(1em)],
 [Zeicheneinheit], grid.cell(colspan: 2)[$#text(fill: red)[$e'$]=e sqrt(1+(#text(fill: blue)[$v$]/c)^2)/sqrt(1-(#text(fill: blue)[$v$]/c)^2)$], [$[e']=qty("1", "Ls/cm")$],
 grid.cell(rowspan: 3)[
@@ -3411,7 +3411,7 @@ text(fill: blue)[$v$], [Relativgeschwindigkeit von $I$ bzgl. #text(fill: red)[$I
 
 == Quantenphysik
 
-#grid(..std,
+#grid(..standard,
 [Energie des Photons], grid.cell(colspan: 2)[$E_"Ph"=h f= (h c)/lambda$], [$[E_"Ph"]=qty("1", "J")$],
 [], [$f$], [Frequenz des Lichts], [$[f]=qty("1", "Hz")$],
 [], [$lambda$], [Wellenlänge des Lichts], [$[lambda]=qty("1", "m")$],
