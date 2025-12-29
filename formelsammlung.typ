@@ -2571,7 +2571,7 @@ text(fill: green)[$l$#v(1em)], [Länge der Luftsäule], [$[l]=qty("1", "m")$],
     intersections("i", "glas", "parallel")
     line((-90deg + alpha1, n1), "i.0", stroke: (dash: "dotted"))
     line((0, 0), ((0, 0), n2 + 0.5, "i.0"), stroke: fuchsia, name: "gebrochen")
-    mark("gebrochen.50%", "i.0", symbol: "barbed", stroke: yellow)
+    mark("gebrochen.50%", "i.0", symbol: "barbed", stroke: fuchsia)
 
     cetz.angle.angle((0, 0), (90deg, 1), "einfallend", radius: 0.6, stroke: red, label: box(baseline: -0.2em)[#text(fill: red)[$alpha_1$]], label-radius: 0.4)
     cetz.angle.angle((0, 0), "reflektiert", (90deg, 1), radius: 0.6, stroke: orange, label: box(baseline: -0.2em)[#text(fill: orange)[$alpha_r$]], label-radius: 0.4)
@@ -2579,7 +2579,7 @@ text(fill: green)[$l$#v(1em)], [Länge der Luftsäule], [$[l]=qty("1", "m")$],
     
     content("einfallend.start", text(fill: red)[einfallender Strahl], anchor: "south-east", padding: 2pt)
     content("reflektiert.end", text(fill: orange)[reflektierter Strahl], anchor: "south-west", padding: 2pt)
-    content("gebrochen.end", text(fill: fuchsia)[gebrochenener Strahl], anchor: "north-west", padding: 2pt)
+    content("gebrochen.end", text(fill: fuchsia)[gebrochener Strahl], anchor: "north-west", padding: 2pt)
     content("lot.end", [Lot], anchor: "south")
     content("luft.south-west", [$n_1$], anchor: "south-west")
     content("glas.south-west", text(fill: gray)[$n_2$], anchor: "north-east")
