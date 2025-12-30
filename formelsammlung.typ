@@ -350,7 +350,7 @@
 == Rechtwinklige Dreiecke
 
 #grid(..mathe, 
-[], [$sin alpha=#text(fill: blue)[Gegenkathete]/#text(fill: red)[Hypothenuse]=#text(fill: blue)[$a$]/#text(fill: red)[$c$]$], grid.cell(rowspan: 4)[#cetz.canvas({
+[], [$sin alpha=#text(fill: blue)[Gegenkathete]/#text(fill: red)[Hypotenuse]=#text(fill: blue)[$a$]/#text(fill: red)[$c$]$], grid.cell(rowspan: 4)[#cetz.canvas({
   import cetz.draw: *
   //import cetz.calc: add
   set-style(stroke: 0.5pt)
@@ -368,7 +368,7 @@
   content("c.50%",text(fill: red)[$c$], anchor: "south-east", padding: 2pt)
 })],
 
-[Winkelfunktionen], [$cos alpha=#text(fill: green)[Ankathete]/#text(fill: red)[Hypothenuse]=#text(fill: green)[$b$]/#text(fill: red)[$c$]$],
+[Winkelfunktionen], [$cos alpha=#text(fill: green)[Ankathete]/#text(fill: red)[Hypotenuse]=#text(fill: green)[$b$]/#text(fill: red)[$c$]$],
 [], [$tan alpha=#text(fill: blue)[Gegenkathete]/#text(fill: green)[Ankathete]=#text(fill: blue)[$a$]/#text(fill: green)[$b$]$#v(1em)],
 smallcaps[Pythagoras], [$#text(fill: blue)[$a$]^2+#text(fill: green)[$b$]^2=#text(fill: red)[$c$]^2$]
 )
@@ -578,7 +578,7 @@ smallcaps[Pythagoras], [$#text(fill: blue)[$a$]^2+#text(fill: green)[$b$]^2=#tex
 [], [$x_i$], [$x$-Koordinate des Schwerpunktes der Masse $m_i$], [$[x_i]=qty("1", "m")$],
 [], [$y_i$], [$y$-Koordinate des Schwerpunktes der Masse $m_i$#v(1em)], [$[y_i]=qty("1", "m")$],
 
-[Schiefe Ebene], grid.cell(colspan: 3)[$#text(fill: red)[$F_||$]/#text(fill: red)[$F_G$]=#text(fill: blue)[Gegenkathete]/#text(fill: red)[Hypothenuse]=#text(fill: blue)[$a$]/#text(fill: red)[$c$]=sin alpha$],
+[Schiefe Ebene], grid.cell(colspan: 3)[$#text(fill: red)[$F_||$]/#text(fill: red)[$F_G$]=#text(fill: blue)[Gegenkathete]/#text(fill: red)[Hypotenuse]=#text(fill: blue)[$a$]/#text(fill: red)[$c$]=sin alpha$],
 grid.cell(rowspan: 3)[
   #cetz.canvas({
     import cetz.draw: *
@@ -612,7 +612,7 @@ grid.cell(rowspan: 3)[
     cetz.angle.angle("b.end", "b", "c", radius: 0.7, label: box(baseline: -0.2em)[$alpha$], label-radius: 0.5)
     cetz.angle.angle("b.start", "a", "b", radius: 0.3, label: box(baseline: -0.2em)[$dot$], label-radius: 0.16)
   })
-], grid.cell(colspan: 3)[$#text(fill: red)[$F_perp$]/#text(fill: red)[$F_G$]=#text(fill: green)[Ankathete]/#text(fill: red)[Hypothenuse]=#text(fill: green)[$b$]/#text(fill: red)[$c$]=cos alpha$],
+], grid.cell(colspan: 3)[$#text(fill: red)[$F_perp$]/#text(fill: red)[$F_G$]=#text(fill: green)[Ankathete]/#text(fill: red)[Hypotenuse]=#text(fill: green)[$b$]/#text(fill: red)[$c$]=cos alpha$],
 [#text(fill: red)[$F_perp$]], [Kraft senkrecht zur Ebene], [$[F_perp]=qty("1", "N")$],
 [#text(fill: red)[$F_||$]], [Kraft parallel zur Ebene#v(1em)], [$[F_||]=qty("1", "N")$]
 )
@@ -1048,7 +1048,7 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
 #grid(..standard,
 [Gravitationskraft], grid.cell(colspan: 2)[$#text(fill: red)[$F_G$]=G (m_1 m_2)/#text(fill: green)[$r$]^2$], [$[F_G]=qty("1","N")$],
 [], [$m_i$], [Massen der beiden Körper], [$[m_i]=qty("1","kg")$],
-[], text(fill: green)[$r$], [Schwerpunktsabstand], [$[r]=qty("1","m")$],
+[], text(fill: green)[$r$], [Schwerpunktabstand], [$[r]=qty("1","m")$],
 [], [$G$], grid.cell(colspan: 2)[Gravitationskonstante#linebreak()$qty("6.67e-11","N m^2/kg^2")$],
 ) #v(-1em)
 #align(center)[
@@ -2917,12 +2917,12 @@ grid.cell(rowspan: 3)[
       content("b", text(fill: blue)[$b$], anchor: "north", padding: 2pt)
     })
 ], text(fill: green)[$f$], [Brennweite \ $f>0$: Hohlspiegel, Sammellinse \ $f<0$: Wölbspiegel, Streulinse], [$[f]=qty("1", "m")$],
-text(fill: red)[$g$], [Gegenstandsweite, $g>0$], [$[g]=qty("1", "m")$],
+text(fill: red)[$g$], [Gegenstandweite, $g>0$], [$[g]=qty("1", "m")$],
 text(fill: blue)[$b$], [Bildweite \ $b>0$: reelles Bild \ $b<0$: virtuelles Bild#v(1em)], [$[b]=qty("1", "m")$],
 
 [Abbildungsmassstab], grid.cell(colspan: 2)[$A=#text(fill: blue)[$B$]/#text(fill: red)[$G$]=#text(fill: blue)[$b$]/#text(fill: red)[$g$]$], [$[A]=1$],
 [], text(fill: blue)[$B$], [Bildgrösse \ $B>0$: reelles Bild \ $B<0$: virtuelles Bild], [$[B]=qty("1", "m")$],
-[$$#v(1em)], text(fill: red)[$G$], [Gegenstandsgrösse, $G>0$], [$[G]=qty("1", "m")$]
+[$$#v(1em)], text(fill: red)[$G$], [Gegenstandgrösse, $G>0$], [$[G]=qty("1", "m")$]
 )
 
 #pagebreak()
