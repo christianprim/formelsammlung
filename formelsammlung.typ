@@ -5,7 +5,7 @@
 #import "@preview/zap:0.5.0"
 
 // Version
-#let version = "4.0.2"
+#let version = "4.0.3"
 
 // Einrichtung
 #set page(paper: "a5")
