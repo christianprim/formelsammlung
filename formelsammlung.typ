@@ -5,7 +5,7 @@
 #import "@preview/zap:0.5.0"
 
 // Version
-#let version = "4.0.3"
+#let version = "4.0.4"
 
 // Einrichtung
 #set page(paper: "a5")
@@ -3273,7 +3273,7 @@ grid.cell(rowspan: 3)[#smallcaps[Lorentz]transformation \
     content("v", text(fill: blue)[$arrow(v)$], anchor: "south", padding: 2pt)
   })
 
-], grid.cell(colspan: 3)[$#text(fill: red)[$x'$]=gamma(x-#text(fill: blue)[$v$]t)$; $x=(#text(fill: red)[$x'$]+#text(fill: blue)[$v$]#text(fill: red)[$t'$])$ \
+], grid.cell(colspan: 3)[$#text(fill: red)[$x'$]=gamma(x-#text(fill: blue)[$v$]t)$; $x=gamma(#text(fill: red)[$x'$]+#text(fill: blue)[$v$]#text(fill: red)[$t'$])$ \
 $#text(fill: red)[$y'$]=y$ \
 $#text(fill: red)[$z'$]=z$ \
 $#text(fill: red)[$t'$]=gamma(t-#text(fill: blue)[$v$]/c^2 x)$; $t=gamma(#text(fill: red)[$t'$]+#text(fill: blue)[$v$]/c^2#text(fill: red)[$x'$])$],
