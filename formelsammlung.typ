@@ -5,7 +5,7 @@
 #import "@preview/zap:0.5.0"
 
 // Version
-#let version = "4.0.4"
+#let version = "4.0.5"
 
 // Einrichtung
 #set page(paper: "a5")
@@ -2313,7 +2313,7 @@ grid.cell(rowspan: 4)[Induktionsgesetz \
     content("vS.70%", text(fill: blue)[$v_S$], anchor: "north")
     content("B", [$B$], anchor: "south", padding: 3pt)
     content("vB.50%", text(fill: blue)[$v_B$], anchor: "north")
-    content((4, 0), [hier: $f_B=f_S (c + #text(fill: blue)[$v_B$])/(c + #text(fill: blue)[$v_S$])$])
+    content((4, 0), [hier: $f_B=f_S (c - #text(fill: blue)[$v_B$])/(c - #text(fill: blue)[$v_S$])$])
   })
 
 ],
