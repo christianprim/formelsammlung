@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name : Install fonts
-        run: apt-get update && apt-get install fonts-texgyre fonts-texgyre-math
+        run: sudo apt-get update && apt-get install fonts-texgyre fonts-texgyre-math
       - name: Setup Typst
         uses: typst-community/setup-typst@v5
       - name: Compile Document
