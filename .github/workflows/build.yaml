@@ -10,12 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Fontist
-        uses: fontist/setup-fontist@v2
-      - name: Install fonts
-        run: |
-          ruby -rpathname -e 'require "fontist"; Fontist.ui = Fontist::Utils::UI.new; system("fontist install \"TeX Gyre Pagella\" \"TeX Gyre Pagella Math\" \"TeX Gyre Heros\"")'
-        # run: fontist install "TeX Gyre Pagella" "TeX Gyre Pagella Math" "TeX Gyre Heros"
+      - name : Install fonts
+        run: apt-get update && apt-get install fonts-texgyre fonts-texgyre-math
       - name: Setup Typst
         uses: typst-community/setup-typst@v5
       - name: Compile Document
