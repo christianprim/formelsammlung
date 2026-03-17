@@ -13,7 +13,7 @@ jobs:
       - name: Setup Fontist
         uses: fontist/setup-fontist@v2
       - name: Install fonts
-        run: fontist install "TeX Gyre Pagella" "TeX Gyre Pagella Math" "TeX Gyre Heros"
+        run: fontist install "TeX Gyre Pagella" #"TeX Gyre Pagella Math" "TeX Gyre Heros"
       - name: Setup Typst
         uses: typst-community/setup-typst@v5
       - name: Compile Document
