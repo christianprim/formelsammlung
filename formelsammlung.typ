@@ -5,7 +5,7 @@
 #import "@preview/zap:0.5.0"
 
 // Version
-#let version = "4.0.5"
+#let version = "4.0.6"
 
 // Einrichtung
 #set page(paper: "a5")
@@ -3424,7 +3424,7 @@ $h=qty("6.62607015e-34", "J s")$],
 [], [$h$], grid.cell(colspan: 2)[#smallcaps[Planck]sches Wirkungsquantum \ 
 $h=qty("6.62607015e-34", "J s")$#v(1em)],
 
-[#smallcaps[De Broglie]], grid.cell(colspan: 3)[Energie und Impuls des Photons gelten auch für Teilchen#v(1em)],
+[#smallcaps[De Broglie]], grid.cell(colspan: 3)[Der Impuls des Photons gilt auch für Teilchen#v(1em)],
 
 [Äusserer Photoeffekt], grid.cell(colspan: 2)[$E_"Ph"=#text(fill: aqua)[$W_A$]+#text(fill: blue)[$E_"kin"$]$], [$[E_"Ph"]=qty("1", "J")$],
 [], text(fill: aqua)[$W_A$], [Elektronenaustrittsarbeit], [$[W_A]=qty("1", "J")$],
