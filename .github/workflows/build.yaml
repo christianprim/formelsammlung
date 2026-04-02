@@ -10,15 +10,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Get Previous tag
+        if: github.ref_type == 'branch'
         id: previoustag
         uses: WyriHaximus/github-action-get-previous-tag@v2
       - name : Install fonts
         run: sudo apt-get update && sudo apt-get install fonts-texgyre fonts-texgyre-math
       - name: Setup Typst
         uses: typst-community/setup-typst@v5
-      - name: Compile Document
+      - name: Compile Document (Test)
+        if: github.ref_type == 'branch'
         run: typst compile --input version=${{ steps.previoustag.outputs.tag }} --pdf-standard 2.0 --no-pdf-tags formelsammlung.typ
+      - name: Compile Document (Release)
+        if: github.ref_type == 'tag'
+        run: typst compile --input version=${{ github.ref_name }} --pdf-standard 2.0 --no-pdf-tags formelsammlung.typ
       - name: Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
