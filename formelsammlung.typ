@@ -41,9 +41,9 @@
 // für Kugel
 #let kugel = gradient.radial(white, gray, center: (25%, 25%))
 // für pos. Ladung
-#let positiv = gradient.radial(white, red.transparentize(50%), center: (25%, 25%))
+#let positiv = gradient.radial(white, red.transparentize(50%), center: (25%, -25%))
 // für neg. Ladung
-#let negativ = gradient.radial(white, blue.transparentize(50%), center: (25%, 25%))
+#let negativ = gradient.radial(white, blue.transparentize(50%), center: (25%, -25%))
 
 // Einstellungen für Schaltschemen mit zap
 #let zap-style = (
@@ -954,8 +954,8 @@ grid.cell(rowspan: 5)[
     rotate(z: -45deg) 
     catmull((-1,0), (0,1.5), (1,0), (0,-1), (-1,-0.5), (-1,0), tension: .5, stroke: black)
 
-    rotate(x: 40deg)
-    line((0,0,-1.5), (0,0,1), stroke : (paint: blue, dash: "dash-dotted"), name: "DA")
+    rotate(x: 70deg)
+    line((0,0,-2), (0,0,1.3), stroke : (paint: blue, dash: "dash-dotted"), name: "DA")
     circle((0, 0), stroke: gray, radius: 0.9)
     arc((-0.06, 5, -0.2), start: 110deg, delta: 330deg, radius: 0.2, stroke: purple, mark: (end: "barbed", scale: 0.5), name: "omega")
     line((0, 0), (170deg, 0.9), stroke: green, name: "r")
@@ -1060,12 +1060,12 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
     let erdkugel = gradient.radial(
     white, 
     blue, 
-    center: (25%, 25%))
+    center: (25%, -75%))
 
     let mondkugel = gradient.radial(
     white, 
     gray, 
-    center: (25%, 25%))
+    center: (25%, -75%))
     
     circle((-4, 0), stroke: blue, fill: erdkugel, radius: 0.9)
     circle((2,0), stroke: gray, fill: mondkugel, radius: 0.2)
@@ -1250,8 +1250,8 @@ grid.cell(rowspan: 2)[#align(center)[
     let M = (h, 0)
 
     rotate(
-      x: -20deg,
-      y: -20deg, 
+      z: -20deg,
+      y: -40deg, 
     )
     arc(add(O, (0,r)), radius: r, start: 90deg, delta: 180deg)
 
@@ -1449,7 +1449,7 @@ text(fill: blue)[$v$#v(1em)], [Geschwindigkeit des Körpers], [$[v]=qty("1", "m/
     #cetz.canvas({
       import cetz.draw: *
       set-style(stroke: 0.5pt)
-  
+
       circle((-2.5, 0), stroke: gray, fill: kugel, radius: 0.2)
       circle((-4, 0), stroke: gray, fill: kugel, radius: 0.2)
       circle((-0.5,0), stroke: gray, fill: kugel, radius: 0.2)
@@ -1479,11 +1479,6 @@ text(fill: blue)[$v$#v(1em)], [Geschwindigkeit des Körpers], [$[v]=qty("1", "m/
       import cetz.draw: *
       set-style(stroke: 0.5pt)
   
-      let kugel = gradient.radial(
-      white, 
-      gray, 
-      center: (25%, 25%))
-
       circle((-2.5, 0), stroke: gray, fill: kugel, radius: 0.2)
       circle((-4, 0), stroke: gray, fill: kugel, radius: 0.2)
       circle((-0.6,0), stroke: gray, fill: kugel, radius: 0.2)
@@ -1530,8 +1525,8 @@ grid.cell(rowspan: 2)[#align(center)[
     let M = (h, 0)
 
     rotate(
-      x: -20deg,
-      y: -20deg, 
+      z: -20deg,
+      y: -40deg, 
     )
     arc(add(O, (0,r)), radius: r, start: 90deg, delta: 180deg)
 
@@ -1564,20 +1559,20 @@ align(center)[
     let M = (h, 0)
 
     rotate(
-      x: -20deg,
-      y: -20deg, 
+      z: -20deg,
+      y: -40deg, 
     )
     arc(add(O, (0,r)), radius: r, start: 90deg, delta: 180deg)
 
     line(add(O, (0, -r)), add(M, (0, -r)))
     line(add(O, (0, r)), add(M, (0, r)))
     line((h,0.0), (rel: (1.5, 0)), stroke: (paint:blue, dash: "dash-dotted"), name: "DA")
-    line((h/2, 0, r), (rel: (0, 0, 1)), stroke: (paint:blue, dash: "dash-dotted"), name: "MA")
+    line((h/2, -r/3, r), (rel: (0, -1/3, 1)), stroke: (paint:blue, dash: "dash-dotted"), name: "MA")
     line((h,0.0), (rel: (0.9, 0)), stroke: blue, mark: (end: "barbed"), name: "L")
-    line((h/2, 0, r), (rel: (0, 0, 0.5)), stroke: red, mark: (end: "barbed"), name: "M")
-    line("L.end", (rel: (0, 0, 1.2)), stroke: blue, mark: (end: "barbed"), name: "DeltaL")
+    line((h/2, -r/3, r), (rel: (0, -.5/3, 0.5)), stroke: red, mark: (end: "barbed"), name: "M")
+    line("L.end", (rel: (0, -.4, 1.2)), stroke: blue, mark: (end: "barbed"), name: "DeltaL")
     arc((1.2, 0.2, 0), start: 110deg, delta: 330deg, radius: 0.2, stroke: purple, mark: (end: "barbed", scale: 0.5), name: "omega")
-    arc((h/2, 0.05, 1.3), start: 180deg, delta: 330deg, radius: (0.2, 0.2), stroke: red, mark: (end: "barbed", scale: 0.5), name: "M_arc")
+    arc((h/2, -0.4, 1.3), start: 180deg, delta: 330deg, radius: (0.2, 0.2), stroke: red, mark: (end: "barbed", scale: 0.5), name: "M_arc")
   
     circle(M, radius: r)
     content("DA.end", text(fill: blue)[DA], anchor: "west")
@@ -1585,7 +1580,7 @@ align(center)[
     content("omega.end", text(fill: purple)[$arrow(omega)$], anchor: "south", padding: 2pt)
     content("L.30%", text(fill: blue)[$arrow(L)$], anchor: "south", padding: 2pt)
     content("DeltaL.60%", text(fill: blue)[$Delta arrow(L)$], anchor: "north-west", padding: 2pt)
-    content("M.50%", text(fill: red)[$arrow(M)$], anchor: "south", padding: 6pt)
+    content("M.60%", text(fill: red)[$arrow(M)$], anchor: "south", padding: 6pt)
     })],
 text(fill: red)[$arrow(M)$], [mittleres Drehmoment], [$[M]=qty("1", "N m")$],
 
@@ -1702,11 +1697,11 @@ grid.cell(rowspan: 2)[
       let licht = gradient.radial(
       yellow, 
       white, 
-      center: (50%, 50%))
+      center: (50%, 0%))
   
       set-style(stroke: (thickness: 0.5pt, cap: "round"))
-      ortho(name: "skizze",{
-        on-yz({
+      ortho({
+        on-zy({
           rect((), (rel: (1, 1)), name: "A", fill: red.transparentize(80%), stroke: red)
           content((0.8, 0.2), [#std.rotate(-10deg)[#skew(ay:-20deg)[#text(fill: red)[$A$]]]])
         })
@@ -1905,7 +1900,7 @@ grid.cell(rowspan: 2)[
       let M = (h, 0)
   
       rotate(
-        x: -20deg,
+        z: -20deg,
         y: -20deg, 
       )
       arc(add(O, (0,r)), radius: r, start: 90deg, delta: 180deg)
@@ -2129,12 +2124,12 @@ grid.cell(rowspan: 3)[Magnetischer Fluss \
       import cetz.draw: *
   
       set-style(stroke: (thickness: 0.5pt, cap: "round"))
-      ortho(name: "skizze", 
+      ortho( 
         //x: 0deg, 
         y: 60deg,
         z: 10deg,
         {
-        on-yz({
+        on-zy({
           rotate(x: -40deg)
           rect((0, 0.6), (rel: (0.6, 0.4)), stroke: red, fill: red.transparentize(50%))
           on-layer(1,line((0.6, 0.6), (rel: (0, 0.4)), (rel: (-0.6, 0)), stroke: red))
@@ -3854,13 +3849,13 @@ $h=qty("6.62607015e-34", "J s")$]
     let O = (0, 0) 
     let M = (h, 0)
 
-    line((0.75,-0.09), (rel: (0, 0.5)), stroke: (paint:blue, dash: "dash-dotted"), name: "DA")
+    line((.9, -0.25), (rel: (0, 0.5)), stroke: (paint:blue, dash: "dash-dotted"), name: "DA")
 
-    line((0.75,-0.3), (rel: (0, -0.3)), stroke: (paint:blue, dash: "dash-dotted"))
+    line((.9,-0.45), (rel: (0, -0.3)), stroke: (paint:blue, dash: "dash-dotted"))
 
     rotate(
-      x: -20deg,
-      y: -20deg, 
+      y: 20deg,
+      z: -20deg
     )
     arc(add(O, (0,r)), radius: r, start: 90deg, delta: 180deg)
 
@@ -3880,7 +3875,12 @@ $h=qty("6.62607015e-34", "J s")$]
 
     set-style(stroke: (thickness: 0.5pt, cap: "round"))
 
-    scale(z: 0.5)
+    scale(z: 1)
+    rotate(
+      x: 15deg,
+      y: -10deg,
+      z: -3deg
+    )
 
     let a = (0, 0)
     let b = (1, 0)
