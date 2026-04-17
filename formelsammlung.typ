@@ -1,6 +1,6 @@
 #import "@preview/unify:0.7.1": unit, qty, num, add-unit
 #import "@preview/ccicons:1.0.1": ccicon
-#import "@preview/cetz:0.4.2"
+#import "@preview/cetz:0.5.0"
 #import "@preview/cetz-plot:0.1.3"
 #import "@preview/zap:0.5.0"
 
