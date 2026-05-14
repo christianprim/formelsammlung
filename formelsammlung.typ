@@ -1,6 +1,6 @@
 #import "@preview/unify:0.7.1": unit, qty, num, add-unit
 #import "@preview/ccicons:1.0.1": ccicon
-#import "@preview/cetz:0.5.0"
+#import "@preview/cetz:0.5.2"
 #import "@preview/cetz-plot:0.1.3"
 #import "@preview/zap:0.5.0"
 
@@ -41,9 +41,9 @@
 // für Kugel
 #let kugel = gradient.radial(white, gray, center: (25%, 25%))
 // für pos. Ladung
-#let positiv = gradient.radial(white, red.transparentize(50%), center: (25%, -25%))
+#let positiv = gradient.radial(white, red.transparentize(50%), center: (25%, 25%))
 // für neg. Ladung
-#let negativ = gradient.radial(white, blue.transparentize(50%), center: (25%, -25%))
+#let negativ = gradient.radial(white, blue.transparentize(50%), center: (25%, 25%))
 
 // Einstellungen für Schaltschemen mit zap
 #let zap-style = (
@@ -1060,12 +1060,12 @@ text(fill: red)[$alpha$], [Winkelbeschleunigung], [$[alpha]=qty("1", "1/s^2")$]
     let erdkugel = gradient.radial(
     white, 
     blue, 
-    center: (25%, -75%))
+    center: (25%, 25%))
 
     let mondkugel = gradient.radial(
     white, 
     gray, 
-    center: (25%, -75%))
+    center: (25%, 25%))
     
     circle((-4, 0), stroke: blue, fill: erdkugel, radius: 0.9)
     circle((2,0), stroke: gray, fill: mondkugel, radius: 0.2)
@@ -1697,7 +1697,7 @@ grid.cell(rowspan: 2)[
       let licht = gradient.radial(
       yellow, 
       white, 
-      center: (50%, 0%))
+      center: (50%, 50%))
   
       set-style(stroke: (thickness: 0.5pt, cap: "round"))
       ortho({
