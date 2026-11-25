@@ -2043,7 +2043,7 @@
   ..standard,
   [Wärmeleitung], grid.cell(
     colspan: 2,
-  )[$#text(fill: aqua)[$Delta Q$]/(Delta t)=-lambda (Delta T)/(#text(fill: green)[$Delta x$])#text(fill: red)[$A$]$], [$[(Delta Q)/(Delta T)]=qty("1", "J/s")$],
+  )[$#text(fill: aqua)[$Delta Q$]/(Delta t)=-lambda (Delta T)/(#text(fill: green)[$Delta x$])#text(fill: red)[$A$]$], [$[(Delta Q)/(Delta t)]=qty("1", "J/s")$],
   [_$->$ @thermo _], [$lambda$], [Wärmeleitfähigkeit], text(size: 9.36pt)[$[lambda]=qty("1", "W/m /K")$],
   grid.cell(rowspan: 3)[#cetz.canvas({
       import cetz-plot: *
